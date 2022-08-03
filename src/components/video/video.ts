@@ -37,7 +37,8 @@ export default class RecordVideo {
             this.video.addEventListener('loadmetadata', () => {
                 this.video.play();
             });
-            
+            this.mediaRecorder = new MediaRecorder(stream);
+            this.mediaRecorder.addEventListener('dataavailable')
         })
     }
 }
